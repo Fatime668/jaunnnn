@@ -1,0 +1,32 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label class="mb-3">Slider Title: </label><br />
+        <input asp-for="Title" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label class="mb-3">Slider Subtitle: </label><br />
+        <input asp-for="SubTitle" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="SubTitle"></span>
+    </div>
+    <div>
+        <label class="mb-3">Slider Decription: </label><br />
+        <input asp-for="Description" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <div>
+        <label class="mb-3">Slider Image: </label><br />
+        <input asp-for="Photo" accept="image/*" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="Photo"></span>
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Create slider</button>
+    </div>
+</form>
